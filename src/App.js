@@ -10,9 +10,8 @@ function App() {
   const [query, setQuery] = useState("");
   const [data, setData] = useState("");
 
-  const handleSearch = async (code) => {
-    console.log(code);
-    if (code === "Enter") {
+  const handleSearch = async (key) => {
+    if (key === "Enter") {
       setQuery("");
       const response = await getWeatherData(query);
       if (response) {
@@ -26,8 +25,6 @@ function App() {
       data !== ""
         ? new Date(data.dt * 1000 - data.timezone * 1000).getHours() + 5
         : 0;
-    console.log(hour);
-
     return hour > 18 ? "app" : "app day";
   };
 

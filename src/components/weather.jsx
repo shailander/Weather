@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import * as data from "../sampleData.json";
 
 const Weather = ({ data }) => {
   const convertTemperature = (temp) => {

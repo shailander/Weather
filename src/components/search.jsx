@@ -9,7 +9,7 @@ function Search(props) {
           placeholder="Search .."
           type="text"
           value={props.value}
-          onKeyDown={(e) => props.onSearch(e.code)}
+          onKeyPress={(e) => props.onSearch(e.key)}
           onChange={(e) => props.onQuery(e.target.value)}
         />
       </div>
