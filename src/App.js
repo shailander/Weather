@@ -11,6 +11,7 @@ function App() {
   const [data, setData] = useState("");
 
   const handleSearch = async (code) => {
+    console.log(code);
     if (code === "Enter") {
       setQuery("");
       const response = await getWeatherData(query);
